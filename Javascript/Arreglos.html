@@ -9,20 +9,46 @@
 <body>
     <script>
         //declarar arreglo
+        //                  0           1       2        3         4
         var colores = ["amarillo ", "verde ", "azul ", "rojo ", "gris "];
 
         //ACCEDER AL ARREGLO: METODOS MAS UTILIZADOS
 
             //ACCEDER Y CAMBIAR ELEMENTOS DEL ARREGLO
-            colores[5]="negro ";
-            colores[6]= "...";            
-            document.write(colores);
+                // colores[5]="negro ";
+                // colores[6]= "..."; 
+                
+                //METODO #1
+               /*var longitud_arreglo = colores.length; //permite saber la longitud del vector
+               colores[longitud_arreglo] = "purpura";
+               document.write(colores);*/
+
+               //METODO #2
+               /*colores.push("rosa ", "blanco ", "naranja ");//agrega elementos al final del arreglo
+               document.write(colores);*/
 
         //ELIMINAR ELEMENTO
+        /* colores.pop();//Elimina el ultimo elemento del arreglo
+        document.write(colores);*/
 
         //CONCATENAR ARREGLOS
+       /* var colores = ["amarillo ", "verde ", "azul ", "rojo ", "gris "];
+        var colores2 = ["Rosa ", "Naranja ", "blanco ", "Purpura"];
+
+        var colores_totales = colores.concat(colores2); //Sirve para concatenar cosas en este caso 2 arreglos
+        document.write(colores_totales);*/
+
 
         //CAMBIAR EL ESTILO DEL ARREGLO
+        /*var colores = ["amarillo ", "verde ", "azul ", "rojo ", "gris "];
+        var arreglo_mejorado = colores.join("  | ");//indica con que va a dividir los elementos del arreglo
+        document.write(arreglo_mejorado);*/
+
+        //ORDENAR ALFABETICAMENTE
+
+        var arreglo_ordenado = colores.sort();//Ordena alfabeticamente el arreglo
+        document.write(arreglo_ordenado);
+
 
     </script>
 </body>
