@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbordamiento CSS</title>
+    <style>
+        p{
+            margin: 0px;
+        }
+        #desbordamiento{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 244, 140);
+            margin-bottom: 150px;
+
+            /*Desbordamiento*/
+            overflow:auto; /*overflow acomoda el texto que se sale de la box*/
+
+        }
+        /*Despplegar texto en columna*/
+        #despliegue{
+            column-count:3;/*dividir texto entre columnas*/
+            column-gap: 5em;/*aumentar espacio entre columnas*/
+            column-rule:  5px dashed blueviolet;/*crear lineas divisoras entre las columnas*/
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <p id="desbordamiento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis molestiae aut velit atque, ipsa iure omnis recusandae voluptate earum libero, cumque alias amet minus maxime sapiente accusamus nam modi inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consectetur eveniet hic assumenda aspernatur quos expedita nam pariatur, et, nihil quod, deleniti necessitatibus? Minima tenetur animi laboriosam saepe, hic illum.  </p>
+    
+    </div>
+
+    <div id="despliegue">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, provident eaque. Cumque praesentium aut esse omnis, quod debitis consectetur beatae minus exercitationem necessitatibus nulla assumenda minima illum, quia tenetur numquam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, doloribus nulla perferendis natus impedit aut incidunt dolor delectus, aliquam error magni dicta accusamus minus dolorum quam, soluta quisquam ea? Rerum?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quae dolores eius dolore, nemo voluptatibus labore cum! Possimus voluptate laudantium eius sequi ipsum ut? Qui ullam possimus modi eveniet suscipit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto at eius soluta voluptatem culpa nesciunt, beatae enim temporibus. Fuga, sint repellendus. Sint sequi tempora minima a, facere dolorum quae nulla Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta provident cupiditate alias delectus explicabo nobis laboriosam, velit dolore facilis esse aspernatur libero, perferendis necessitatibus minus debitis consequatur similique modi rem?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eveniet pariatur consequatur at obcaecati alias perspiciatis. Sit quo, quas laboriosam repellat minus quae porro. Voluptatum quibusdam deleniti sapiente nulla incidunt.
+        </p>
+
+    </div>
+    
+</body>
+</html>

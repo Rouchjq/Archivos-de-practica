@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox alineacion individual</title>
+
+    <style>
+         .contenedor{
+            width: 23%;
+            height: 400px;
+            background-color: lightgrey;
+            float:left;
+            margin: 10px;
+
+            /*aplicar flexbox*/
+            display: flex;
+           flex-flow: row nowrap;
+           justify-content: center;
+           align-items: center;
+         }
+
+         .items{
+            background-color: lightblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 22px;
+         }
+
+         .c1 .item4{
+
+             align-self: flex-start;/*aling-sefl sirve para mover un elemento hijo en concreto*/
+         }
+         .c2 .item4{
+
+            align-self: flex-end;/*aling-sefl sirve para mover un elemento hijo en concreto*/
+        }
+    
+         .c3 .item4{
+
+            align-self: center;/*aling-sefl sirve para mover un elemento hijo en concreto*/
+        }
+    
+         .c4 .item4{
+
+            align-self: stretch;/*aling-sefl sirve para mover un elemento hijo en concreto*/
+        }
+    
+         .c5 .item4{
+
+            align-self: flex-start;/*aling-sefl sirve para mover un elemento hijo en concreto*/
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="contenedor c1">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+    </div>
+    
+    <div class="contenedor c2">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+    </div>    
+
+    <div class="contenedor c3">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+    </div>    
+
+    <div class="contenedor c4">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+    </div>    
+
+    <div class="contenedor c5">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+    </div>    
+    
+</body>
+</html>

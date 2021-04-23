@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+</head>
+<body>
+    <!--imagen-->
+    <img src="/archivos/Ejemplo.png" alt="imagen de Ejemplo" width="500px" height="500px" >
+     <!-- ALT atributo opcional, descripcion de la imagen que usa el motor de busqueda-->
+     <!--width ancho height alto de la imagen-->
+    
+     <!--Combinar imagnenes-->
+     <figure>
+
+        <img src="/archivos/Ejemplo.png" alt=""width="200px" height="200px">
+        <img src="/archivos/puto.jpg" alt=""width="200px" height="200px">
+        <img src="/archivos/imagen externa.png" alt=""width="200px" height="200px">
+        <figcaption>leyenda de las imagenes</figcaption>
+     </figure>
+
+     <!--videos-->
+     <video src="/archivos/1x01 Volver a nacer Parte 1.mp4" controls autoplay poster="/archivos/imagen externa.png"></video> 
+     <!--Control para darle controles al video (pla pause etc) autoplay para iniciar automaticamente al cargar la pestaña, y lopp para que se repita siempre-->
+
+     <!--subtitulo en video-->
+     <video controls>
+
+        <source src=".mp4">
+        <source src=".mp4">
+        <source src=".mp4"> 
+        <track src="sub-es.vtt" srclang="es" label="Español" default>
+        <track src="sub-en.vtt" srclang="en" label="Ingles">
+        <track src="sub-fr.vtt" srclang="fr" label="Frances">
+        
+     </video>
+
+     <!--videos de youtube-->
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/SC4xMk98Pdc"></iframe>
+
+     <!-- Audios-->
+     <audio src="" controls loop autoplay></audio>
+
+</body>
+</html>

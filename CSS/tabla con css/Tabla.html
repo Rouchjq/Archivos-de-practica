@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+    <link rel="stylesheet" href="/archivos/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.css">
+
+    <style>
+        table{
+            margin: auto;/*centrar tabla*/
+            margin-top: 60px;
+            text-align: center; /*centrar texto*/
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border-collapse:collapse; /*Quiter separancion entre los bordes de la tabla*/
+
+
+        }
+
+        table th,
+        table td{ /*con catenamos selectores en CSS*/
+            border: 1px solid rgb(233, 233, 233);
+            padding: 5px 10px ; /*alto y ancho*/
+        }
+
+        table th,
+        table td:first-child{
+            background-color: rgb(120, 201, 228);/*color fondo*/
+            color: rgb(246, 252, 252);/*color texto*/
+            font-weight: 600;/*color de letras-fuente*/
+            width: 100px;
+        }
+
+        table td span{
+            margin-right: 15px;
+            font-size: 17px;
+            cursor: pointer; /*para q parezca un link*/
+        }
+
+        table td span:hover{
+            opacity: 0.7;
+        }
+
+        table td span:nth-child(2){
+            color: rgb(10, 144, 221);
+        }
+        table td span:nth-child(1){
+            color: rgb(52, 206, 98);
+        }
+        table td span:nth-child(3){
+            color: rgb(218, 55, 49);
+            margin-right: 0px;
+        }
+        table tr:nth-child(odd){/*odd para impares*/
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        table tr:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <Th>Nombre</Th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span>
+                    <span class="fas fa-exclamation-circle" ></span>
+                    <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> 
+                    <span class="fas fa-exclamation-circle" ></span> 
+                    <span class="fas fa-eraser"></Span> </td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Jorge</td>
+                <td>Quintero</td>
+                <td>xxxxx@gmail.com</td>
+                <td><span class="fas fa-edit"></span> <span class="fas fa-exclamation-circle" ></span> <span class="fas fa-eraser"></Span></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    
+</body>
+</html>

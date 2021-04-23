@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos y validacion en HTML</title>
+</head>
+<body>
+    <form action="">
+
+        <!-- Atributos de input-->
+        <input type="text" placeholder="habla paja aqui">
+        <br><br>
+
+        <input type="text" autofocus>
+        <br><br>
+
+        <input type="text" autocomplete="off">
+        <br><br>
+
+        <select name="" id="" multiple> <!-- Atributo multiple exclusivo de etiqueta select-->
+            <option value="1">Cosa 1</option>
+            <option value="2">Cosa 2</option>
+            <option value="3">Cosa 3</option>
+            
+        </select>
+        <br> <br>
+        <hr>
+
+        <!-- Validacion-->
+        <input type="text" required> <!--required hace que no se envien casillas sin vacias-->
+
+        <input type="text" disabled > <!--para deshabilitar un input con cualquier tipo de texto-->
+
+        <input type="text" readonly value=" texto no modificable">
+
+        <input type="number" min="5" max="20" placeholder="entre 5 y 20" > <!-- min y max limitan los numeros, en este caso entre 5 y 20-->
+
+        <input type="password" minlength="5" maxlength="8" placeholder="Contraseña"> <!--minlegth y maxlength limita el numero de caracteres-->
+
+        <input type="text" placeholder="patron" pattern="[A-Z]{2}[0-9]{3}" title="Dos letras y Tres numeros">
+
+        <input type="submit" value="aceptar">
+
+
+
+    </form>
+</body>
+</html>

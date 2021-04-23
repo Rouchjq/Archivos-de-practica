@@ -1,0 +1,22 @@
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,200px);
+
+    /*alineacion horizontal*/
+    justify-items: center;
+
+    /*alineacion vertical*/
+    align-items: center; /* stretch estira los elementos en vertical*/
+
+
+}
+
+ /*alinear en forma individual*/
+ .grid .elemento{
+     background: #8a3bb5;
+     justify-self: start; /*alinea un solo elemento horizontal*/
+     align-self: start;
+
+ }

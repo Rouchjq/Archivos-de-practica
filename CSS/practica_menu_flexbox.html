@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu con flexbox</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-around;/*para que haya espacio entre los elementos*/
+            align-items: center;
+            padding: 10px 0px;
+            border-bottom: 1px solid rgb(240, 209, 36);
+            margin-bottom: 100px;           
+       }
+
+        li{
+            display: inline-block;
+            padding: 0px 20px;
+            list-style: none;
+        }
+
+        a{
+            font-size: 14px;
+            text-decoration: none;/*quita la rayita debajo de los links*/
+            text-transform: uppercase;/*convierte en mayuscula todo el texto aunque se haya puesto en minuscula*/
+            font-weight: 700;
+            color: black;
+        }
+
+        a:hover{
+            color: rgb(240, 209, 36);
+            transition: 0.3s;
+        }
+
+
+        .logo{
+            width: 140px;
+            cursor: pointer;
+        }
+
+        .boton{
+            background-color:rgb(54, 54, 54);
+            padding: 10px 25px;
+            border-radius: 50px;
+            color: #fff;
+        }
+
+        .boton:hover{
+            background-color: rgb(240, 209, 36);
+            color: rgb(54, 54, 54);
+        }
+
+        /*MENU 2*/
+
+        .menu2{
+            padding: 10px 5%;
+        }
+
+        .menu2 .logo{
+            margin-right: auto;/*centra el margen del logo rodando todo lo que este a su derecha al fondo de la caja*/
+
+        }
+
+        .menu2 .boton{
+            margin-left: 40px;
+        }
+
+        /*MENU 3*/
+        .menu3 .logo{
+            order: 2;
+        }
+
+        .menu3 nav{
+            order: 1;
+        }
+
+        .menu3 .boton{
+            order: 0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="/archivos/Logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+
+                <li><a href="">nosotros</a></li>
+                <li><a href="">servicios</a></li>
+                <li><a href="">portafolio</a></li>
+                <li><a href="">multimedia</a></li>
+                <li><a href="">contacto</a></li>
+            </ul>
+        </nav>
+        <a href="" class="boton">Login</a>
+    </header>
+
+    <header class="menu2">
+        <img src="/archivos/Logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">nosotros</a></li>
+                <li><a href="">servicios</a></li>
+                <li><a href="">portafolio</a></li>
+                <li><a href="">multimedia</a></li>
+                <li><a href="">contacto</a></li>
+            </ul>
+        </nav>
+        <a href="" class="boton">Login</a>
+    </header>
+
+    <header class="menu3">
+        <img src="/archivos/Logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+
+                <li><a href="">nosotros</a></li>
+                <li><a href="">servicios</a></li>
+                <li><a href="">portafolio</a></li>
+                <li><a href="">multimedia</a></li>
+                <li><a href="">contacto</a></li>
+            </ul>
+        </nav>
+        <a href="" class="boton">Login</a>
+    </header>
+
+</body>
+</html>

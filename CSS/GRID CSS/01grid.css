@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /*definir columnas*/
+    grid-template-rows: 1fr 2fr;/*definir filas del grid*/
+    grid-gap: 20px;/*contrla el espacio entre filas y columnas*/
+
+    /*repeat*/
+    /*grid-template-columns: repeat(3, 1fr); indica 3 columnas de una fraccion */
+
+}
+
+/*propiedades que permiten destacar valor minimo y maximo*/
+/*.grid{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 1fr; /*minmax controla el tamaño minimo y maximo de la fila o columna*/

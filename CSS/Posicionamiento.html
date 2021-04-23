@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento CSS</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        article{
+            border: 1px solid red;
+            margin-bottom: 100px;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid blue;
+            text-align: center;
+            line-height: 200px;/*interlineado*/
+        }
+
+        /*DESPLIEGUE EN BLOQUE*/
+        .bloque div{
+            display: block;
+        }
+        /*despliegue en linea*/    
+        .enlinea div{
+            display: inline; /*No toma en cuenta ni ancho ni alto aplicado*/
+            display: inline-block;/*SI toma en cuenta ancho y alto aplicado*/
+        }
+        /*despliegue en tabla*/
+        .tabla div{
+            display: table-cell; /*muestra elementos pegados como si fueran tablas*/
+        }
+        /*posicionamiento relativo*/
+        #relativo{
+            position: relative;/*se ubica especificamente donde se le indique teniendo en cuenta el contenedor padre*/
+            left: 300px;
+            top: 10px;
+        }
+        /*Posicionamiento absoluto*/
+
+        #absoluto{
+            position: absolute;
+            right: 50px;
+        }
+        /* posicionamiento fijo
+        #fijo{ 
+            position:fixed;
+            background-color: green;
+            bottom: 20px;
+            right: 30px;
+            }   
+            /*Ubica el elemento en una parte de la pantalla sin tomar en cuenta el contenedor padre, y al hacer scroll en la pantalla el elemento se mueve junto con la pantalla
+        */
+
+            /*Posicionamiento flotante*/
+            /*Comunmente usado para ordenar contenido en paginas web*/
+            .flotante{
+                height: 500px;
+            }
+
+            .flotante div{
+                float: left;
+            }
+
+            .flotante div:nth-child(2){
+                float: right;
+            }
+
+    </style>
+
+</head>
+<body>
+        <h1>elementos del bloque</h1>
+            <article class="bloque">
+                <div>UNO</div>
+                <div>DOS</div>
+                <div>TRES</div>
+                <div>CUATRO</div>
+            </article>
+
+        <h1>Elementos en linea</h1>
+            <article class="enlinea">
+                <div>UNO</div>
+                <div>DOS</div>
+                <div>TRES</div>
+                <div>CUATRO</div>
+            </article>
+
+        <h1>Elementos en tabla</h1>
+            <article class="tabla">
+                <div>UNO</div>
+                <div>DOS</div>
+                <div>TRES</div>
+                <div>CUATRO</div>
+            </article>
+
+            <h1>´Posicionamiento</h1>
+            <article>
+                <div id="relativo">RELATIVO</div>
+                <div id="absoluto">ABSOLUTO</div>
+                <div id="fijo">FIJO</div>
+            </article>
+
+            <h1>Poscionamiento flotante</h1>
+            <article class="flotante">
+                <div>UNO</div>
+                <div>DOS</div>
+                <div>TRES</div>
+                <div>CUATRO</div>           
+            </article>
+
+</body>
+</html>
