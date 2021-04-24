@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo while JS</title>
+</head>
+<body>
+    <script>
+        var i=0;
+        var colores=["amarillo", "azul", "verde", "rojo"];
+        var longitud=colores.length; 
+
+        //pregunta y luego ejecuta
+        // while(i<= colores.length){
+        //     document.write(colores[i] + "<br>");
+        //     i++;
+        // }
+    
+        //Ejecuta de una vez y luego pregunta
+        do{
+            document.write("marico #" + (i+1) + " de color: " + colores[i] + "<br>");
+            i++;
+
+        }while(i<longitud);
+
+
+
+    </script>
+</body>
+</html>

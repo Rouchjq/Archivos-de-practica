@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCIONES JS</title>
+</head>
+<body>
+
+    <script>
+
+        //asi se declara una funcion
+
+        // function hola_mundo() {
+        //     //Instrucciones 
+        //     document.write("Hola mundo"+ "<br>");
+        // }
+        // hola_mundo(); //Invoco a funcion
+
+        
+        //las Funciones retornan valores
+        function suma(a, b ){
+            var  c= a+b;
+            return c
+        }
+        // invoco a la funcion en un document.write para mostrar los resultados
+        document.write(suma(10, 30));
+
+        document.write( "<br>");
+
+
+        //Las funciones pueden estar en variables
+        var resta= function (a, b) {
+            var c= a-b;
+            return c;
+        }
+        
+        document.write(resta(100, 30));
+
+        document.write( "<br>");
+
+        //las funciones pueden estar guardadas en variables y tener un nombre 
+        var valor_minimo = function minimo(valor1, valor2) {
+            if(valor1 < valor2){
+                return valor1;
+            }
+            else{
+                return valor2;
+            }            
+        }
+
+        document.write(valor_minimo(500, 80));
+        document.write( "<br>");
+        document.write(valor_minimo(20,60));
+
+
+
+
+
+
+    </script>
+</body>
+</html>
