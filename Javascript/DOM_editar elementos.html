@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar DOM JS</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="uno">Jorge Alejandro</li>
+        <li>Pedro perez</li>
+    </ol>
+
+    <script>
+
+        //Editar contenido
+        var primer_elemento = document.getElementById("uno");
+            
+            //Metodo 1 toma en cuenta etiquetas HTML
+            //primer_elemento.innerHTML= "Nuevo <i>texto</i> para este elemento";//innerhtlm edita el contenido del elemento
+
+            //Metodo 2
+           // primer_elemento.textContent = "<i>Cambio</i> el texto";
+
+        //Reemplazar contenido
+        var elemento = document.createElement("li");
+        var contenido = document.createTextNode("Quintero Luzardo");
+
+        elemento.appendChild(contenido);
+        var contenedor = document.getElementById("lista");
+        var posicion = document.getElementsByTagName("li")[1];
+
+        //contenedor.replaceChild(elemento, posicion);
+
+        //Eliminar elemento
+        contenedor.removeChild(posicion);
+
+
+
+
+
+    </script>
+</body>
+</html>

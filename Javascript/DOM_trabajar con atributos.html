@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejor de atributos DOM JS</title>
+
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background: #7c7c7c;
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #aaaaaa;
+        }
+
+        .amarillo{
+            background: #ffd400;
+            border: 1px solid #000;
+        }
+
+        .verde{
+            background: #00dd73;
+            border: 1px solid #000;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section id="contenedor">
+        <div id="elemento1"></div>
+        <div id="elemento2"></div>
+    </section>
+
+
+
+    <script>
+        var elemento1 = document.getElementById("elemento1");
+        var elemento2 = document.getElementById("elemento2");
+
+
+        //metodo 1
+        elemento2.setAttribute("class","verde"); //(atributo, valor del atributo)
+        elemento2.setAttribute("id","nuevoID");//asigne un id al div elemento 2
+
+        //metodo 2
+        elemento1.className="amarillo"; //le asigno una clase directamente a elemento 1
+        elemento1.id="otroID";
+
+    </script>
+</body>
+</html>

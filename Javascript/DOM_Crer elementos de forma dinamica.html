@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM crear elementos de forma dinamica JS</title>
+</head>
+<body>
+      
+    <h1 id="titulo">Titulo de mi pagina web</h1>
+    <div id="subtitulo"></div>
+
+    <p class="miparrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non error iusto quae minima beatae explicabo doloremque sequi deserunt, tenetur magnam nisi sed praesentium iure aspernatur odio est voluptatibus animi repellendus.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat temporibus ipsam sapiente quos facere vero unde? Tenetur cum, assumenda, temporibus ipsum nemo, voluptas corrupti nisi iure id soluta magni. Illum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias iste aliquam magnam sequi quidem officiis quas eum nam amet architecto doloribus, earum quos officia molestiae libero. Corrupti natus error labore!</p>
+
+    <p id="elemento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illo fugiat vitae quam ratione sed cumque, enim quidem non? Eius ut doloremque adipisci mollitia vero cum quisquam expedita numquam nihil. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, magnam nemo? Ducimus rem enim ad voluptate quibusdam voluptas? Molestiae nulla minus repudiandae voluptates non necessitatibus, illo ad officiis rem provident? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ut recusandae quod exercitationem numquam nesciunt laboriosam porro commodi obcaecati error! Corrupti minima inventore eius commodi perspiciatis odio expedita aliquid ipsam!</p>
+
+    <p class="miparrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium facere unde eaque voluptas est debitis. Vitae esse accusantium, dolore est perspiciatis sint recusandae consectetur voluptatum vero culpa et, blanditiis adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ut qui et libero provident, magni quisquam tempora ipsam expedita aperiam dolorem modi atque a facere minus tenetur! Provident, sint dolor? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea officiis omnis a assumenda sit laudantium, rerum minus quo possimus perspiciatis recusandae et dolore hic nam culpa suscipit eos similique facilis!</p>
+
+
+    <script>
+        //ACCEDER a elementos con el DOM
+
+            var parrafos = document.getElementsByTagName("p");
+
+            var elemento1 = document.getElementById("elemento");
+
+            var elementoclase = document.getElementsByClassName("miparrafo");
+
+        //Crear un nuevo elemento del DOM
+            //1. Crear elemento
+            var nuevo = document.createElement("h3");
+
+            //2. Crear Contenido
+            var contenido = document.createTextNode("Este es mi nuevo contenido");
+
+            //3. Juntar el elemento creado con el contenido
+            nuevo.appendChild(contenido);
+
+            //4. Agregar nuevo elemento creado a mi documento
+            document.getElementById("subtitulo").appendChild(nuevo); //El appenchild mete el elemento que esta en "nuevo" en el id subtitulo
+
+            //5. Crear atributos
+            nuevo.setAttribute("class", "misubtitulo");
+
+    </script>
+</body>
+</html>

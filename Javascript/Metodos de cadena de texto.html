@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de cadena de texto JS</title>
+</head>
+<body>
+    <script>
+        var minombre="JORGE QUINTERO";
+
+        //metodo length - indica cantidad de elementos ya sea arreglos o caracteres
+            //texto = minombre.length;//cuenta los caracteres de "minombre"
+
+        //Metodo substring - Cortar una cadena de texto donde le indiquemos
+            //var texto = minombre.substring();//corta y muestra el resto
+
+        //Metodo Substr - pasar dos parametros que indican indice de inicio y cuantos caracteres debe cortar
+            //var texto = minombre.substr(0,6);//indica inicio y final del corte a mostrar
+
+        //Metodo indexof - Devuelve que posicion se encuentra un elemento
+            var texto = minombre.indexOf("o", 5);//Puedo indicar desde donde empieza a buscar
+            //muestra donde esta el caracter en el vector
+
+
+        //Metodo lastIndexof - Busca desde atras hacia adelante en que posicion se encuentra
+             //var texto = minombre.lastIndexOf("r");
+        
+        //Metodo Replace - permite reemplazar una cadena por otra
+            //var texto = minombre.replace("quintero", "javascrip");
+
+        //Metodo toUpperCase - transforma a mayuscula
+             //var texto = minombre.toUpperCase();
+
+
+        //Metodo toLowerCase - transofma a minuscula
+            var texto = minombre.toLowerCase();
+
+        document.write(texto);
+
+    </script>
+</body>
+</html>

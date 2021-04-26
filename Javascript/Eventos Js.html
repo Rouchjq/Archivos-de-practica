@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+   <a href="http://www.google.com" id="boton">Mi enlace</a>
+   <input id="input" type="text">
+
+
+    <script>
+        //eventos a boton
+
+        // (function() {
+
+        //     var holamundo= function(){
+        //         console.log("hola mundo!");
+        //     }
+
+        //   var boton = document.getElementById("boton");
+        //   //addeventlistener Crea un evento
+        //   boton.addEventListener("click", holamundo) // (evento, funcion que contiene accion del evento)
+
+        // }()) //Funcion auto invocada
+
+        // Eventos para input
+
+        // (function() {
+
+        //     //funcion que hace de accion del evento
+        //     // var holamundo= function(){
+        //     //     console.log("se escribio en el input");
+        //     // }
+
+        //     // var input = document.getElementById("input");
+        //     // input.addEventListener("change",holamundo); //change otro tipo de evento
+               
+        //         // var input = document.getElementById("input");
+        //         // input.addEventListener("keypress",holamundo);
+        // }())
+
+
+         //saber el tipo de evento    
+        (function() {
+
+            // var holamundo= function(e){
+            //     console.log("Elevento que se esta ejecutando es: " + e.type); //.type permite saber el evento que se esta utilizando 
+            // }
+
+            // var holamundo= function(e){
+            //     console.log("Elevento que se esta ejecutando es: " + e.target); //.target permite saber que elemento ejecuta el evento 
+            // }
+
+            var holamundo= function(e){
+                console.log("El evento que se esta ejecutando es: " + e.target); //.target permite saber que elemento ejecuta el evento 
+                e.preventDefault();//quita la accion que hace por defecto;
+            }
+
+            var boton = document.getElementById("boton");
+             //addeventlistener Crea un evento
+            boton.addEventListener("click", holamundo) // (evento, funcion que contiene accion del evento)
+
+        }()) //Funcion auto invocada
+
+
+
+    </script>
+</body>
+</html>
