@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y Hora JS</title>
+</head>
+<body>
+    <script>
+        (function name(params) {
+            //Obtener fecha
+
+            var fecha = new Date();
+            document.write(fecha);
+        
+            //Obtener hora
+            var hora = fecha.getHours();
+            var minutos = fecha.getMinutes();
+            var segundos = fecha.getSeconds();
+            console.log("hora: "+ hora); //en formato 24h
+            console.log("minutos "+minutos);
+            console.log("segundos "+ segundos);
+
+            //Obtener fechas
+            var dia = fecha.getDay();
+            console.log("dia en arreglo: "+ dia); //esto se toma los dias como una arreglo y muestra su posicion
+
+            var diames = fecha.getDate();
+            var mes = fecha.getMonth();
+            var year = fecha.getFullYear();
+            console.log("dia: "+ diames);
+            console.log("mes en arrlgo: "+ mes);//tambien toma los meses como un arreglo
+            console.log("año: "+ year);
+
+
+
+
+
+
+
+        }())
+    </script>
+</body>
+</html>

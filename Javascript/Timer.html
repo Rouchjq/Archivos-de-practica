@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers JS</title>
+</head>
+<body>
+    
+
+    <script>
+        // //Timeout
+
+        // (function () {
+        //     function hola_mundo() {
+        //         console.log("hola mundo bcrro");
+                
+        //     }
+
+        //     setTimeout(hola_mundo, 3000);//(funcion a ejecutar, delay en milisegundos) setTimeout retrasa el lanzamiento el tiempo que se le indica. 1000ms=1s
+            
+        // }())
+
+
+        //Interval
+
+        (function () {
+            var contador=0;
+            function hola_mundo() {
+                contador++;
+                console.log(contador);
+                if(contador == 10){
+                    clearInterval(repeticion) // clearInterval de tiene la funcion setInterval, para ejecutar se necestia identificar la funcion setInterval, lo reocmendado es meterla en una variable
+                    
+                }
+            }
+
+            var repeticion = setInterval(hola_mundo, 2000); //(funcion a ejecutar, cada cuanto se va a ejecutar) En este caso la funcion hola mundo se ejecuta cada 2s
+
+        }())
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj JS</title>
+
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            /* align-items: center; */
+            
+        }
+        div{
+            display: inline-flex;
+            margin-left: 20px;
+        }
+        .horas #ampm{
+            margin-left: 8px;
+            font-size: 50px;
+            color: #525660;
+            text-transform: lowercase;
+        }
+
+        .horas p{
+            margin: 0;
+            font-size: 80px;
+            margin-top: 50px;
+        }
+
+        .fecha p{
+            margin: 0;
+            margin-right: 15px;
+            font-size: 50px;
+            font-style: italic;
+            color: #525660;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="horas">
+        <p id="horas"></p>
+        <p>:</p>
+        <p id="minutos"></p>
+        <p>:</p>
+        <p id="segundos"></p>
+        <p id="ampm"></p>
+    </div>
+
+    <div class="fecha">
+        <p id="diaSe"></p>
+        <p id="dia"></p>
+        <p>de</p>
+        <p id="mes"></p>
+        <p>del</p>
+        <p id="year"></p>
+    </div>
+
+    <script>
+        (function actualizar_datos () {
+            
+            //Obtener datos de tiempo y fecha
+
+            var fecha = new Date(), //Date con la D mayuscula
+                ampm,
+                horas = fecha.getHours(),
+                minutos = fecha.getMinutes(),
+                segundos = fecha.getSeconds(),
+                dia_semana = fecha.getDay(),//comienza desde 0 es un arreglo
+                dias = fecha.getDate(),
+                mes = fecha.getMonth(), //comienza desde 0 es un arreglo
+                year = fecha.getFullYear();
+
+
+            //Obtenemos Nuestros elementos HTML
+
+            var elemento_hora = document.getElementById("horas"),
+                elemento_minutos = document.getElementById("minutos"),
+                elemento_segundos = document.getElementById("segundos"),
+                elemento_ampm = document.getElementById("ampm"),
+                elemento_dia_semana = document.getElementById("diaSe"),
+                elemento_dia = document.getElementById("dia"),
+                elemento_mes = document.getElementById("mes"),
+                elemento_year = document.getElementById("year");
+                
+            //Array de dias y meses
+            var array_semana = ["Domingo", "Lunes", "Martes", "Miercoles","Jueves","Viernes","Sabado"],
+                array_mes = ["Enero","Febreo","Marzon","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+            //asignamos elementos de fecha
+            elemento_dia_semana.innerHTML = array_semana[dia_semana] ; //Tambien puedes usar .textContent para Sobre escribir sobre el elemento html
+            elemento_dia.textContent = dias;
+            elemento_mes.innerHTML = array_mes[mes];
+            elemento_year.innerText = year;
+            
+            //Transoformar de 24h a 12h
+
+            if(horas >= 12){
+                horas = horas-12;
+                ampm = "pm";
+            }
+            else{
+                ampm="am";
+            }
+
+
+            //Agregamos cero a los minutos y segundos
+            if (minutos < 10) {
+                minutos = "0" + minutos; 
+                
+            }
+
+            if (segundos < 10) {
+                segundos = "0" + segundos; 
+                
+            }
+
+            if (horas < 10) {
+                horas = "0" + horas; 
+                
+            }
+
+            // arreglar que reloj evite la hora 00
+
+            if (horas == 0) {
+                horas = 12;
+            }
+            
+            
+            
+
+
+            //Asignamos elementos de tiempo
+            elemento_hora.textContent = horas;
+            elemento_minutos.textContent = minutos;
+            elemento_segundos.textContent = segundos;
+            elemento_ampm.textContent = ampm;
+
+            setInterval (actualizar_datos,1000);
+
+        }())
+
+
+    </script>
+</body>
+</html>
