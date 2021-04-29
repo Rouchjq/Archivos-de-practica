@@ -36,11 +36,47 @@
             justify-content: space-between;
         }
 
-        .input input{
+        .inputs input{
             width: 50%;
             margin: 10px;
             padding: 20px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            color: #21295c;
         }
+
+        .botones{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            justify-content: space-around;
+        }
+
+        .botones button{
+            width: 25%;
+            height: 50px;
+            margin: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            background: #3ba8db;
+            color: #fff;
+            border: 0;
+            transition: all 0.3s;
+        }
+
+        .botones button:hover{
+            background: #92f8ff80;
+        }
+
+        .result p{
+            color: #fff;
+            font-size: 45px;
+            font-weight: 700;
+        }
+
 
 
     </style>
@@ -55,7 +91,7 @@
             <input type="number" id="numero2">
         </div>
 
-        <div id="botones" class="boton">
+        <div id="botones" class="botones">
             <button id="suma">Sumar</button>
             <button id="resta">Restar</button>
             <button id="multiplica">Multiplicar</button>
@@ -65,11 +101,39 @@
         <div class="result">
             <p id="resultado">-</p>
         </div>
-
     </div>
 
     <script>
 
+        function sumar(e) {
+            var a = parseFloat(document.getElementById("numero1").value); //parseFloat convierte el texto en un numero decimal
+            var b = parseFloat(document.getElementById("numero2").value);
+            var resultado = document.getElementById("resultado");
+            var operacion = e.target.id;  //Indico cual es el ID del elemento al que le doy click
+
+           if (operacion == "suma"){
+                var c = a + b;
+
+           }
+           else if(operacion =="resta"){
+                var c = a - b;
+
+           }
+           else if(operacion == "multiplica"){
+                 var c = a * b;
+
+           }
+           else if(operacion == "divide"){
+                 var c = a / b;
+
+           }                
+
+           resultado.innerHTML = c;
+        }    
+
+        var botones = document.getElementById("botones");
+        botones.addEventListener("click",sumar);
+            
     </script>
 </body>
 </html>

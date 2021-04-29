@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicar estilos a un formulario</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form{
+            background-color: #333;
+            width: 30%;
+            height: 500px;
+            margin:auto;/*Se usa para centrar*/
+            margin-top: 100px;
+            padding: 30px;
+            border: 20px solid #222;
+            display: flex;
+            flex-direction: column;/*direccion vertical*/
+            justify-content: space-between;
+        }
+
+        .two-columns{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fields{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+        }
+
+        .radiobutton{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+
+        }
+
+        .radiobutton label{
+            margin: 0px 5px;
+        }
+
+        .term{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        
+
+        label{
+            margin-bottom: 10px; 
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #dedede;
+            font-size: 14px;
+        }
+
+        input,textarea{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            
+        }
+
+        input:focus,
+        textarea:focus{
+
+            outline: none;
+            /*Focus es el estado de cuando le damos click a la a los inputs en este caso */
+        }
+
+        input:focus{
+            border-bottom: 2px solid rgba(255, 255, 255, 1);
+                       
+        }
+
+        textarea{
+            resize: none;/*evita que el usuario modifique el campo de texto*/
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            flex-basis: 100px;
+
+        }
+
+        textarea:focus{
+            border:2px solid rgba(255, 255, 255, 1);
+        }
+
+        .boton{
+            display: flex;
+            justify-content: center;
+        }
+
+        .boton input{
+            padding: 15px 40px;
+            background-color: rgba(18, 206, 231, 0.5);
+            border: none;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: seashell;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .boton input:hover{
+            padding: 15px 70px;
+            background-color: rgba(18, 206, 231, 1);    
+        }
+
+    </style>
+
+</head>
+<body>
+    <form id="formulario" name="formulario">
+        <div class="two-columns">
+            <div class="fields">
+                <label for="name">Nombre</label>
+                <input id="name" type="text" name="name" autocomplete="off">
+            </div>
+
+            <div class="fields">
+                <label for="lastname">apellido</label>
+                <input id="lastname" type="text" name="lastname " autocomplete="off">
+            </div>
+
+        </div>
+
+        <div class="two-columns">
+            <div class="fields">
+                <label for="tel">Telefono</label>
+                <input id="tel" type="text" name="tel" autocomplete="off">
+            </div>
+
+            <div class="fields">
+                <label for="email">Coreo</label>
+                <input id="email" type="email" name="email" autocomplete="off">
+            </div>
+        </div>
+
+        <div class="fields radiobutton">
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="sexo" id="hombre" value="hombre">
+            <label for="mujer">Mujer</label>
+            <input type="radio" name="sexo" id="mujer" value="mujer">
+        </div>
+
+        <div class="fields">
+            <label for="coment">Comentarios</label>
+            <textarea id="coment"></textarea>
+        </div>
+
+        <div class="fields term">
+            <label for="term">Terminos y condiciones</label>
+            <input type="checkbox" name="term" id="term">
+        </div>
+
+        <div class="boton">
+            <input type="submit" name="enviar" id="btn" value="enviar">
+        </div>
+
+    </form>
+
+    <script>
+        var formulario = document.getElementById("formulario"),
+            boton = document.getElementById("btn");
+
+        //eventos
+        function validar_datos(e) {
+            //otra forma de acceder a los elementos del formulario sin usar .getElement... accede por medio del atributo ID y el NAME (preguntar para asegurar)
+            var input_nombre = document.formulario.name.value, //.value para acceder al valor del elemento
+                input_apellido = document.formulario.lastname.value,
+                input_email = document.formulario.email.value;
+
+                if(input_nombre == 0 || input_apellido == 0 || input_email == 0){
+                    alert("Llene los campos necesarios");
+                    e.preventDefault();
+                }          
+        }
+
+        function validar_rb(e) {
+            if(document.formulario.sexo[0].checked == false && document.formulario.sexo[1].checked == false){
+                alert("Elija uno de los sexos");
+                e.preventDefault();
+            }
+            
+        }
+
+        function validar_term(e) {
+            if(document.formulario.term.checked == false){
+                alert("Acepte los terminos y condiciones");
+                e.preventDefault();
+            }
+            
+        }
+        //funcion que ejecuta (llama) todas las funciones
+        function validar(e) {
+
+            validar_datos(e);
+            validar_rb(e);
+            validar_term(e);            
+        }
+        
+        formulario.addEventListener("submit",validar);
+
+
+
+
+    </script>
+
+</body>
+</html>
